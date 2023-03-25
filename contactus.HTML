@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Myvote.in | A Platform for Citizens Engagement Towards Voting</title>
+    <link rel="icon" type="image/png" href="logo-black.png" />
+  <style>
+    .set0 {
+      background-image: url(12041797-beautiful-indian-flag-background-with-space-for-your-text.webp);
+      color: rgb(110, 15, 15);
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      display: flex;
+      text-align: center;
+      flex-direction: row;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .set1 {
+      margin: 10px;
+    }
+
+    nav {
+      background-color: green;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin-right: 1rem;
+    }
+
+    nav li:last-child {
+      margin-right: 0;
+    }
+
+    nav a {
+      display: block;
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: orange;
+    }
+
+    .set2 {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .set3 {
+      margin-top: 20px;
+    }
+
+    .set4 {
+      margin-left: 80%;
+    }
+
+    form {
+      background-color: oldlace;
+      width: 80%;
+      margin-left: 10%;
+      padding: 3%;
+      border-radius: 20px;
+      border-style: solid;
+      border-width: medium;
+      font-size: 14pt;
+
+    }
+
+    footer {
+      width: 100%;
+      background-image: linear-gradient(orange, white, green);
+      color: black;
+      height: 100px;
+      text-align: center;
+
+    }
+
+    #base {
+      margin-top: 10px;
+      padding-top: 40px;
+    }
+    .required {
+            
+            color: red;
+        }
+
+    input,
+    textarea {
+      padding: 2pt 2pt;
+      border: 1px solid #4e4c4c;
+      font-size: medium;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-top: 1.5em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="set0">
+    <div class="set1">
+      <img src="logo-black.png" width="200px" height="200px">
+    </div>
+    <div class="set1">
+      <h1>राष्ट्रीय मतदान सेवा डेमो पोर्टल</h1>
+    </div>
+    <div class="set1">
+      <h1>NATIONAL VOTER SERVICES DEMO PORTAL</h1>
+    </div>
+    <div class="set1">
+      <img src="logo-black.png" width="200px" height="200px">
+    </div>
+  </div>
+  <div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutus.html">About</a></li>
+        <li><a href="privacyandpolicy.html">Privacy Policy</a></li>
+        <li><a href="contactus.HTML">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="set2">
+    <div class="set3">
+        <button type="menu" id="A+" >A+</button>
+        <button type="menu" id="A-" >A-</button>
+    </div>
+    
+</div>
+  <header>
+    <h1>Contact Us</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <p>If you have any questions or concerns about the voting portal, please don't hesitate to contact us.</p>
+      <form action="submit-form.php" method="POST">
+        <label for="name">Name<span class="required"> <span class="required"> * </span> </span>:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email<span class="required"> <span class="required"> * </span> </span>:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+    <section>
+      <h2>Contact Information</h2>
+      <p>You can also reach us through the following channels:</p>
+      <ul>
+        <li>Email: <a href="mailto:contact@votingportal.com">contact@votingportal.com</a></li>
+        <li>Phone: +91 1234567890</li>
+        <li>Address: TCR INNOVATION, Navi Mumbai</li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p id="base"> Copyright © 2023 TCR INNOVATION ~ All Rights Reserved </p>
+  </footer>
+</body>
+<script>
+  const fontSmallBtn = document.getElementById('A-');
+      const fontLargeBtn = document.getElementById('A+');
+      const bodyEl = document.querySelector('body');
+      let currentFontSize = parseInt(getComputedStyle(bodyEl).fontSize, 10);
+  
+      // add click event listeners to buttons
+      fontSmallBtn.addEventListener('click', () => {
+        currentFontSize -= 2; // decrease font size by 2 pixels
+        bodyEl.classList.add('font-small');
+        bodyEl.classList.remove('font-large');
+        bodyEl.style.fontSize = `${currentFontSize}px`;
+      });
+  
+      fontLargeBtn.addEventListener('click', () => {
+        currentFontSize += 2; // increase font size by 2 pixels
+        bodyEl.classList.add('font-large');
+        bodyEl.classList.remove('font-small');
+        bodyEl.style.fontSize = `${currentFontSize}px`;
+      });
+  </script>
+</html>

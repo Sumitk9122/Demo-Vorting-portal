@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myvote.in | A Platform for Citizens Engagement Towards Voting</title>
+    <link rel="icon" type="image/png" href="logo-black.png" />
+    <style>
+        .set0 {
+            background-image: url(12041797-beautiful-indian-flag-background-with-space-for-your-text.webp);
+            color: rgb(110, 15, 15);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            text-align: center;
+            flex-direction: row;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .set1 {
+            margin: 10px;
+
+        }
+
+        nav {
+            background-color: green;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 1rem;
+        }
+
+        nav li:last-child {
+            margin-right: 0;
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            padding: 1rem;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: orange;
+        }
+
+        .set2 {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .set3 {
+            margin-top: 20px;
+        }
+
+        .set4 {
+            margin-left: 80%;
+        }
+
+        form {
+            background-color: oldlace;
+            width: 80%;
+            margin-left: 10%;
+            padding: 3%;
+            border-radius: 20px;
+            border-style: solid;
+            border-width: medium;
+            font-size: 14pt;
+        }
+
+        footer {
+            width: 100%;
+            background-image: linear-gradient(orange, white, green);
+            color: black;
+            height: 100px;
+            text-align: center;
+
+        }
+
+        #base {
+            margin-top: 10px;
+            padding-top: 40px;
+        }
+        .required {
+            
+            color: red;
+        }
+
+        .font-small{
+            font-size: 14px;
+        }
+
+        .font-large{
+            font-size: 18px;
+        }
+        #scroll-to-top{
+            z-index: 99;
+            font-size: 25px;
+            border: strong;
+            outline: none;
+            background-color: oldlace;
+            color: black;
+            cursor: pointer;
+            padding: 3px;
+            border-radius: 4px;
+            position: fixed;
+            bottom: 120px;
+            right:0.5%;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="set0">
+        <div class="set1">
+            <img src="logo-black.png" width="200px" height="200px">
+        </div>
+        <div class="set1">
+            <h1>राष्ट्रीय मतदान सेवा डेमो पोर्टल</h1>
+        </div>
+        <div class="set1">
+            <h1>NATIONAL VOTER SERVICES DEMO PORTAL</h1>
+        </div>
+        <div class="set1">
+            <img src="logo-black.png" width="200px" height="200px">
+        </div>
+    </div>
+    <div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="privacyandpolicy.html">Privacy Policy</a></li>
+                <li><a href="contactus.HTML">Contact </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="set2">
+        <div class="set3">
+            <button type="menu" id="A+" >A+</button>
+            <button type="menu" id="A-" >A-</button>
+        </div>
+        <div class="set4">
+            <label>Select Language:</label>
+            <select id="select" onclick="myfunction();" >
+                <option value="English">English</option>
+                <option value="Hindi">Hindi</option>
+                
+            </select>
+        </div>
+    </div>
+
+    <h2 style="text-align: center;">Note: Fields marked with asterisks ( <span class="required"> * </span> ) are mandatory</h2>
+    <form>
+        <fieldset style="border-radius: 2%;">
+            <legend style="text-align: center;">
+                <h3>FORM 6</h3>
+                <p>[See rule 13(1) and 26]</p>
+            </legend>
+            <div>
+                <p>Application for inclusion of name in the electoral roll for the first time due to the transfer of
+                    voter or any other constituency from any one constituency</p>
+
+                <p>In service</p>
+                <p>Electoral Registration Officer,</p>
+                <label>State<span class="required"> * </span></label>
+                <select>
+                    <option>Select</option>
+                </select>
+                <label>District<span class="required"> * </span></label>
+                <select>
+                    <option>Select</option>
+                </select>
+                <br>
+                <label for="">Legislative Assembly / Parlimentary constituency <span class="required"> * </span></label>
+                <select>
+                    <option>Select</option>
+                </select>
+
+            </div>
+            <p>I request that my name be included in electoral rolls for all the aforesaid areas.</p>
+            <div>
+                <div>
+                    <input type="radio" name="gender-choice" value="choice-1">
+                    <label for="gender-male">First time voter</label>
+                </div>
+                <div>
+                    <input type="radio" name="gender-choice" value="choice-2">
+                    <label for="gender-male">Due to transfer from other meeting areas.</label>
+                </div>
+            </div>
+            <p>Below are specifications in support of my claim to be included in the electoral rolls.</p>
+            <div>
+                <h3>Mandatory specifications</h3>
+                <div>
+                    <label for="first-name">(A) Name <span class="required"> * </span> </label>
+                    <input type="text" name="first-name" required>
+                    <input type="text" name="Last-name" required>
+                </div>
+                <div>
+                    <label for="first-name">(B) Surname (if any) <span class="required"> * </span> </label>
+                    <input type="text" name="first-name" required>
+                    <input type="text" name="Last-name" required>
+                </div>
+                <div>
+                    <label for="first-name">(C) Name of the applicant's relative <span class="required"> * </span></label>
+                    <input type="text" name="first-name" placeholder="sumit" required>
+                    <input type="text" name="Last-name" placeholder="kumar" required>
+                </div>
+                <div>
+                    <label for="first-name">Nickname of the applicant's relative <span class="required"> * </span></label>
+                    <input type="text" name="first-name" required>
+                    <input type="text" name="Last-name" required>
+                </div>
+                <div>
+                    <label for="first-name">(D) Type of the relationship <span class="required"> * </span> </label>
+                    <select> name="first-name">
+                        <option value="number">Select</option>
+                    </select>
+                </div>
+                <div>
+                    <div>
+                        <input type="radio" name="gender-choice" value="choice-1">
+                        <label for="gender-male">(E) Age [on January 1 of the current calender] <span class="required"> * </span> </label>
+                        <input type="text" placeholder="2019">
+                        <select> name="first-name">
+                            <option value="number">Year</option>
+                        </select>
+                        <select> name="first-name">
+                            <option value="number">Month</option>
+                        </select>
+                    </div>
+                    <p>Or</p>
+                    <div>
+                        <input type="radio" name="gender-choice" value="choice-2">
+                        <label for="gender-male"> (F) Date of birth (in the form of day/ month/ year) (if known)
+                            <span class="required"> * </span></label>
+                        Date:<input type="date" name="date">
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <label for="gender-male">(G) Applicant's gender <span class="required"> * </span></label>
+                    <select> name="first-name">
+                        <option value="number">Select</option>
+                        <option value="number">Male</option>
+                        <option value="number">Female</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <h3>Current address, whose applicant is nominally resident</h3>
+                <div>
+                    <label for="first-name">House no. <span class="required"> * </span> </label>
+                    <input type="text" name="first-name" required>
+                    <input type="text" name="Last-name" required>
+                </div>
+                <div>
+                    <label for="first-name">Street / area / location <span class="required"> * </span> </label>
+                    <input type="text" name="first-name" required>
+                    <input type="text" name="Last-name" required>
+                </div>
+                <div>
+                    <label for="first-name">City / Village: <span class="required"> * </span></label>
+                    <input type="text" name="first-name" required>
+                    <input type="text" name="Last-name" required>
+                </div>
+                <div>
+                    <label for="first-name">Post Office: <span class="required"> * </span> </label>
+                    <input type="text" name="first-name" required>
+                    <input type="text" name="Last-name" required>
+                </div>
+                <div>
+                    <label for="first-name">Pin Code <span class="required"> * </span> </label>
+                    <input type="text" name="first-name" required>
+                </div>
+                <div>
+                    <label for="gender-male">State / Union Territory <span class="required"> * </span></label>
+                    <select> name="first-name">
+                        <option value="number">Select</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="gender-male">District <span class="required"> * </span></label>
+                    <select> name="first-name">
+                        <option value="number">Select</option>
+                    </select>
+                </div>
+                <br>
+                <hr>
+                <label for="first-name">Family / Neighbour Epic No.</label>
+                <input type="text" name="first-name" required>
+                <hr>
+
+            </div>
+            <div>
+                <h3>Optional specialties</h3>
+                <p>(T) Disability (if any)</p>
+                <div>
+                    <input type="checkbox" name="agree">
+                    <label for="agree">Visual impairment </label>
+                    <input type="checkbox" name="agree">
+                    <label for="agree">Speech and hearing impairment </label>
+                    <input type="checkbox" name="agree">
+                    <label for="agree">Motion disabling </label>
+                    <input type="checkbox" name="agree">
+                    <label for="agree">other </label>
+                    <input type="text" required>
+                </div>
+                <div>
+                    <label>(Th) Email ID (optional)</label>
+                    <input type="text" required>
+                </div>
+                <div>
+                    <label>(D) mobile number (optional) +91</label>
+                    <input type="text" required>
+                </div>
+
+            </div>
+            <div>
+                <h3>Upload supporting documents (Supported formats .jpg, .png, .bmp, .jpeg) (max. 2MB) <a href="#">List
+                        of supported documents </a></h3>
+                <div>
+                    <label for="avatar">Your photo <span class="required"> * </span></label>
+                    <input type="file" id="avatar1" name="avatar" accept="image/png, image/jpeg">
+                    <br>
+                    <label for="avatar">Age proof <span class="required"> * </span></label>
+                    <br>
+                    <input type="file" id="avatar2" name="avatar" accept="image/png, image/jpeg">
+                    <label for="avatar">Document type <span class="required"> * </span></label>
+                    <select> name="first-name">
+                        <option value="number">Select</option>
+                    </select>
+                    <br>
+                    <label for="avatar">Address proof <span class="required"> * </span></label>
+                    <br>
+                    <input type="file" id="avatar3" name="avatar" accept="image/png, image/jpeg">
+                    <label for="avatar">Document type <span class="required"> * </span></label>
+                    <select> name="first-name">
+                        <option value="number">Select</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <h3>Declaration</h3>
+                <p>I declare I declare that according to my best knowledge and belief</p>
+                <p>I am a citizen of India and of my birth;</p>
+                <label>City / Village: </label>
+                <input type="text" required>
+                <br>
+                <label>Select state <span class="required"> * </span></label>
+                <select> name="first-name">
+                    <option value="number">Select</option>
+                </select>
+                <label>District <span class="required"> * </span></label>
+                <select> name="first-name">
+                    <option value="number">Select</option>
+                </select>
+                <br>
+                Date:<input type="date" name="date">
+                <p>(ii) I am a nominally resident in the address given in the above (date, month, year) above;</p>
+                <br>
+                <p>I have not applied to include my name in the electoral roll for any other constituency;</p>
+                <div>
+                    <input type="radio" name="gender-choice" value="choice-1">
+                    <label for="gender-male">(iv) My name has not been already included in the electoral roll for this
+                        or any other assembly / parliamentary constituency
+                </div>
+                <p>Or</p>
+                <div>
+                    <input type="radio" name="gender-choice" value="choice-2">
+                    <label for="gender-male">My name would have been included in electoral rolls of the State's
+                        constituency, in which I was already residing in the address mentioned below, and if so, then I
+                        request that it be removed from that electoral roll. Go.
+                    </label>
+                </div>
+                <br>
+                <hr>
+                <div>
+                    <label>Location <span class="required"> * </span> </label>
+                    <input type="text" required>
+                    Date:<input type="date" name="date">
+                </div>
+                <p>I am afraid that the statement or declaration, which is false, to whom I know it or believe that it
+                    is false or I do not believe in being true, the People's Representation Act, 1950 (43 of 1950 ) Is
+                    punishable under section 31</p>
+                <label>Captcha </label>
+                <img src="captcha.png" id="captchaimg" width="80px" height="20px">
+                <input id="6_letters_code" name="6_letters_code" type="text">
+            </div>
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+    <button id="scroll-to-top"><strong>⬆️</strong></button>
+    <footer>
+        <p id="base"> Copyright © 2023 TCR INNOVATION ~ All Rights Reserved </p>
+    </footer>
+</body>
+<script>
+    function myfunction(){
+        var txt = document.getElementById("select") ;
+        if( txt.value=="Hindi"){
+            if(confirm("आप मायवोट हिंदी भाषा पोर्टल पर रीडायरेक्ट कर रहे हैं।")){
+                location.replace("hindi_index.html")
+            }
+            else{
+                location.replace("index.html")
+            }
+        }
+        
+    }
+
+    const fontSmallBtn = document.getElementById('A-');
+		const fontLargeBtn = document.getElementById('A+');
+		const bodyEl = document.querySelector('body');
+		let currentFontSize = parseInt(getComputedStyle(bodyEl).fontSize, 10);
+
+		// add click event listeners to buttons
+		fontSmallBtn.addEventListener('click', () => {
+			currentFontSize -= 2; // decrease font size by 2 pixels
+			bodyEl.classList.add('font-small');
+			bodyEl.classList.remove('font-large');
+			bodyEl.style.fontSize = `${currentFontSize}px`;
+		});
+
+		fontLargeBtn.addEventListener('click', () => {
+			currentFontSize += 2; // increase font size by 2 pixels
+			bodyEl.classList.add('font-large');
+			bodyEl.classList.remove('font-small');
+			bodyEl.style.fontSize = `${currentFontSize}px`;
+		});
+        window.addEventListener('scroll', function() {
+			var button = document.getElementById('scroll-to-top');
+			if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) {
+				button.style.display = 'block';
+			} else {
+				button.style.display = 'none';
+			}
+		});
+
+		document.getElementById('scroll-to-top').addEventListener('click', function() {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		});
+</script>
+
+</html>
